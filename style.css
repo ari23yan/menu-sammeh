@@ -1,0 +1,92 @@
+/* RezaFaghih */
+.font{
+  font-family:'Irs'!important;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-position: auto;
+  background-attachment: fixed;
+}
+
+#container{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+#menu-container {
+  position: relative;
+  width: 700px;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+#menu-container #menu-item{
+  position: relative;
+  width: 175px;
+  height: 175px;
+  background:#186351;
+  outline: 50px solid #f4f4f4 ;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+#menu-container #menu-item::after{
+  content: '';
+  position:absolute;
+  left: 36%;
+  top: 22%;
+  width:50px;
+  height: 50px;
+  border-radius: 100%;
+  background:#008767;
+  
+  z-index: 1;
+  transition: 500ms;
+}
+#menu-container #menu-item:hover:after{
+  left: -25%;
+  top: -25%;
+  width: 150%;
+  height:150%;
+}
+#menu-container #menu-item i {
+  font-size: 28px;
+  color:white;
+  z-index: 2;
+}
+#menu-container #menu-item span {
+  font-size: 16px;
+  color:white;
+  font-family: font;
+  z-index: 2;
+}
+#menu-container #menu-item:nth-child(4){
+  transform: translateY(-120px);
+}
+
+#menu-container #menu-item:nth-child(5){
+  transform: translateY(-120px);
+}
+@font-face {
+  font-family: 'Irs';
+  /* فونت خودتونو اینجا تعریف کنید */
+  src: url(./FontsFree-Net-ir_sans.ttf);
+}
+
